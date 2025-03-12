@@ -5,6 +5,7 @@ import { SQLiteProvider } from 'expo-sqlite';
 import { migrarBaseDatos } from './src/servicios/Database';
 import Home from './src/screens/home/Home';
 import Usuarios from './src/screens/usuarios/Usuarios';
+import Dispositivos from './src/screens/dispositivos/Dispositivos';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,9 +13,17 @@ export default function App() {
     return (
         <SQLiteProvider databaseName="usuarios.db" onInit={migrarBaseDatos}>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName="Home"screenOptions={{ headerStyle: { backgroundColor: '#007bff' },headerTintColor: '#fff',headerTitleStyle: { fontWeight: 'bold' }  }}>
+                <Stack.Navigator 
+                    initialRouteName="Home"
+                    screenOptions={{ 
+                        headerStyle: { backgroundColor: '#007bff' },
+                        headerTintColor: '#fff',
+                        headerTitleStyle: { fontWeight: 'bold' }  
+                    }}
+                >
                     <Stack.Screen name="Home" component={Home} options={{ title: 'Inicio' }} />
                     <Stack.Screen name="Usuarios" component={Usuarios} options={{ title: 'Gestión de Usuarios' }} />
+                    <Stack.Screen name="Dispositivos" component={Dispositivos} options={{ title: 'Gestión de Dispositivos' }} />
                 </Stack.Navigator>
             </NavigationContainer>
         </SQLiteProvider>

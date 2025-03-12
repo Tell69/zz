@@ -10,7 +10,11 @@ const Home = ({ navigation }) => {
             <Text style={styles.descripcion}>Prueba Anderson Jacome</Text>
 
             <TouchableOpacity style={styles.boton} onPress={() => navigation.navigate('Usuarios')}>
-                <Text style={styles.botonTexto}>Ir a Usuarios</Text>
+                <Text style={styles.botonTexto}>Gestionar Usuarios</Text>
+            </TouchableOpacity>
+            
+            <TouchableOpacity style={[styles.boton, styles.botonDispositivos]} onPress={() => navigation.navigate('Dispositivos')}>
+                <Text style={styles.botonTexto}>Gestionar Dispositivos</Text>
             </TouchableOpacity>
         </View>
     );

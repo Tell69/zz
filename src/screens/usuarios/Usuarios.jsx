@@ -5,7 +5,7 @@ import Contenedor from "../../components/contenedor/Contenedor";
 import { useSQLiteContext } from "expo-sqlite";
 import { getUsuarios, saveUsuario, editarUsuario, eliminarUsuario } from "../../servicios/Database";
 
-const Usuarios = () => {
+const Usuarios = ({ navigation }) => {
     const db = useSQLiteContext();
     const [nombre, setNombre] = useState('');
     const [correo, setCorreo] = useState('');
@@ -97,6 +97,13 @@ const Usuarios = () => {
                         </View>
                     ))}
                 </ScrollView>
+                
+                <TouchableOpacity 
+                    style={styles.botonDispositivos} 
+                    onPress={() => navigation.navigate('Dispositivos')}
+                >
+                    <Text style={styles.botonTexto}>Gestionar Dispositivos</Text>
+                </TouchableOpacity>
             </View>
         </Contenedor>
     );

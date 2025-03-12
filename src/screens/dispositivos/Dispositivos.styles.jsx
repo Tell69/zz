@@ -30,6 +30,21 @@ export default StyleSheet.create({
         marginBottom: 15,
         backgroundColor: '#f9f9f9',
     },
+    labelPicker: {
+        fontSize: 16,
+        marginBottom: 5,
+        color: '#555',
+    },
+    pickerContainer: {
+        borderWidth: 1,
+        borderColor: '#ddd',
+        borderRadius: 5,
+        marginBottom: 15,
+        backgroundColor: '#f9f9f9',
+    },
+    picker: {
+        height: 50,
+    },
     botonAgregar: {
         backgroundColor: '#4CAF50',
         padding: 12,
@@ -42,13 +57,6 @@ export default StyleSheet.create({
         borderRadius: 5,
         alignItems: 'center',
     },
-    botonDispositivos: {
-        backgroundColor: '#9C27B0',
-        padding: 12,
-        borderRadius: 5,
-        alignItems: 'center',
-        marginTop: 15,
-    },
     botonTexto: {
         color: 'white',
         fontWeight: 'bold',
@@ -57,7 +65,7 @@ export default StyleSheet.create({
     areaLista: {
         flex: 1,
     },
-    usuarioItem: {
+    dispositivoItem: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -71,9 +79,18 @@ export default StyleSheet.create({
         shadowRadius: 2,
         elevation: 2,
     },
-    textoUsuario: {
-        fontSize: 16,
+    infoDispositivo: {
         flex: 1,
+    },
+    nombreDispositivo: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        color: '#333',
+        marginBottom: 5,
+    },
+    detalleDispositivo: {
+        color: '#666',
+        fontSize: 14,
     },
     botones: {
         flexDirection: 'row',
